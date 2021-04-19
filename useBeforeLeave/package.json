@@ -1,0 +1,31 @@
+{
+  "name": "@ian_test_nooks/use-beforeleave",
+  "version": "1.0.2",
+  "description": "React Hook to check mouse position when mouse leave element or area",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azsquadDev/Nooks.git"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "beforeLeave"
+  ],
+  "author": "AZSquad.co",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azsquadDev/Nooks/issues"
+  },
+  "homepage": "https://github.com/azsquadDev/Nooks#readme",
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@ian_test_nooks/use-confirm",
+  "version": "1.0.0",
+  "description": "React Hook to confirm popup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azsquadDev/Nooks.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "hook",
+    "confirm"
+  ],
+  "author": "AZSquad.co",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azsquadDev/Nooks/issues"
+  },
+  "homepage": "https://github.com/azsquadDev/Nooks#readme"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@ian_test_nooks/use-notification",
+  "version": "1.0.0",
+  "description": "React Hook to show notification popup after grant permission",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azsquadDev/Nooks.git"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "notification"
+  ],
+  "author": "AZSquad.co",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azsquadDev/Nooks/issues"
+  },
+  "homepage": "https://github.com/azsquadDev/Nooks#readme"
+}

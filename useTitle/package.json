@@ -1,0 +1,34 @@
+{
+  "name": "@ian_test_nooks/use-title",
+  "version": "1.0.3",
+  "description": "React Hook to update your document's title",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azsquadDev/Nooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "useTitle",
+    "hooks"
+  ],
+  "author": "ian@azsquad.co.kr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azsquadDev/Nooks/issues"
+  },
+  "homepage": "https://github.com/azsquadDev/Nooks#readme",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "react-dom": "^17.0.2",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {}
+}

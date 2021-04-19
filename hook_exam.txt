@@ -1,0 +1,138 @@
+import "./styles.css";
+import useTitle from "@ian_test_nooks/use-title";
+import useInput from "@ian_test_nooks/use-input";
+import useTabs from "@ian_test_nooks/use-tabs";
+import useClick from "@ian_test_nooks/use-click";
+import useConfirm from "@ian_test_nooks/use-confirm";
+import usePreventLeave from "@ian_test_nooks/use-preventleave";
+import useBeforeLeave from "@ian_test_nooks/use-beforeleave";
+import useFadeIn from "@ian_test_nooks/use-fadein";
+import useNetwork from "@ian_test_nooks/use-network";
+import useScroll from "@ian_test_nooks/use-scroll";
+import useFullscreen from "@ian_test_nooks/use-fullscreen";
+import useNotification from "@ian_test_nooks/use-notification";
+import useAxios from "@ian_test_nooks/use-axios";
+
+const content = [
+  {
+    tab: "section 1",
+    content: "I'm the content of the section 1"
+  },
+  {
+    tab: "section 2",
+    content: "I'm the content of the section 2"
+  }
+];
+
+export default function App() {
+  useTitle("I love CCC");
+
+  const maxLen = (value) => {
+    return value.length <= 10;
+  };
+  const name = useInput("Mr.", maxLen);
+
+  const { currentItem, changeItem } = useTabs(0, content);
+
+  const sayHello = () => console.log("Hello");
+  const title = useClick(sayHello);
+
+  const deleteWorld = () => console.log("delete the World!");
+  const abort = () => console.log("you save the world");
+  const confirmDelete = useConfirm("Are you sure?", deleteWorld, abort);
+
+  const { enablePrevent, disablePrevent } = usePreventLeave();
+
+  const begForLife = () => console.log("Please dont leave");
+  useBeforeLeave(begForLife);
+
+  const fadeInH1 = useFadeIn(1, 2);
+  const fadeInP = useFadeIn(5, 10);
+
+  const handleNetworkChange = (online) => {
+    console.log(online ? "we Just went online" : "we are offline");
+  };
+  const onLine = useNetwork(handleNetworkChange);
+
+  const { x, y } = useScroll(0, 100);
+
+  const onFulls = (isFull) => {
+    console.log(isFull ? "we are full" : "we are small");
+  };
+  const { element, triggerFull, exitFull } = useFullscreen(onFulls);
+
+  const trigerNotif = useNotification("Can I steel your kimchi?", {
+    body: "I love kimchi dont you?"
+  });
+
+  const { loading, error, data, refetch } = useAxios({
+    url: "https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by=rating"
+  });
+
+  return (
+    <div className="App" style={{ height: "1000vh" }}>
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      <input placeholder="Name" {...name} />
+
+      <div>
+        {content.map((section, index) => (
+          <button onClick={() => changeItem(index)}>{section.tab}</button>
+        ))}
+        <div>{currentItem.content}</div>
+      </div>
+
+      <div>
+        <h1 ref={title}>Click Me~!</h1>
+      </div>
+
+      <div>
+        <button onClick={confirmDelete}>Delete the world</button>
+      </div>
+
+      <div>
+        <div>Hi</div>
+        <button onClick={enablePrevent}>Protect</button>
+        <button onClick={disablePrevent}>unProtect</button>
+      </div>
+
+      <div>
+        <div>y &lt;= 0 print console.log</div>
+      </div>
+
+      <div>
+        <h1 {...fadeInH1}>hi</h1>
+        <p {...fadeInP}>sdfsdafsdfsaddgfhh efdhgfd</p>
+      </div>
+
+      <div>
+        <div>{onLine ? "Online" : "Offline"}</div>
+      </div>
+
+      <div>
+        <h1 style={{ position: "fixed", color: y > 100 ? "red" : "green" }}>
+          hello
+        </h1>
+      </div>
+
+      <div>
+        <div ref={element}>
+          <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDAxMTFfMjAw/MDAxNTc4NzMwMzQ0MTcy.QguzdRQcCqWA2DJKeHVwuxPJV58Vqw4-bO4CXw2Xp98g.B1eM51dW7fEeKyZnt3uT5zirLNpEa1nSuZ2aV5U0-iEg.JPEG.insu1229/1578730343150.jpg?type=w800" />
+          <button onClick={exitFull}> exitFull</button>
+        </div>
+        <button onClick={triggerFull}>Make FullScreen</button>
+      </div>
+
+      <div>
+        <h1>Hello</h1>
+        <button onClick={trigerNotif}>Hello</button>
+      </div>
+
+      <div>
+        <h1>{data && data.status}</h1>
+        <h2>{loading && "Loading"}</h2>
+        <button onClick={refetch}>Refetch</button>
+      </div>
+    </div>
+  );
+}

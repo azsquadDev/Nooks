@@ -1,0 +1,28 @@
+{
+  "name": "@ian_test_nooks/use-network",
+  "version": "1.0.0",
+  "description": "React Hook to check online/offline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azsquadDev/Nooks.git"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "network"
+  ],
+  "author": "AZSquad.co",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azsquadDev/Nooks/issues"
+  },
+  "homepage": "https://github.com/azsquadDev/Nooks#readme",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

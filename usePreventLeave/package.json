@@ -1,0 +1,24 @@
+{
+  "name": "@ian_test_nooks/use-preventleave",
+  "version": "1.0.0",
+  "description": "React Hook to prevent Page before Leave",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azsquadDev/Nooks.git"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "preventLeave"
+  ],
+  "author": "AZSquad.co",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azsquadDev/Nooks/issues"
+  },
+  "homepage": "https://github.com/azsquadDev/Nooks#readme"
+}
